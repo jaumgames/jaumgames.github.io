@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J.A.U.M Games</title>
+<meta name="description" content="J.A.U.M Games — creadores de Café Sort: Ordena y Decora, un juego de puzles para Android.">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cafe: #3B2416;
+    --crema: #FFF8EF;
+    --naranja: #D9661C;
+    --suave: #F3E4D0;
+    --texto2: #6B4F3C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--cafe);
+    font-family: "Lato", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--naranja); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  header { padding: 22px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .marca { font-weight: 900; font-size: 20px; letter-spacing: .5px; color: var(--cafe); text-decoration: none; }
+
+  .hero { padding: 40px 0 56px; text-align: center; }
+  .hero img.icono {
+    width: 132px; height: 132px; border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(59,36,22,.18);
+  }
+  .hero h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 900; margin: 22px 0 8px; line-height: 1.15; }
+  .hero p { font-size: 18px; color: var(--texto2); max-width: 560px; margin: 0 auto 28px; }
+  .boton {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--cafe); color: var(--crema); text-decoration: none;
+    padding: 14px 26px; border-radius: 14px; font-weight: 700; font-size: 17px;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .boton:hover { background: var(--naranja); transform: translateY(-2px); }
+  .boton svg { width: 22px; height: 22px; fill: currentColor; }
+
+  .capturas {
+    display: flex; gap: 18px; justify-content: center;
+    padding: 8px 0 56px; overflow-x: auto; scroll-snap-type: x mandatory;
+  }
+  .capturas img {
+    width: 220px; flex: 0 0 auto; border-radius: 22px; scroll-snap-align: center;
+    box-shadow: 0 8px 24px rgba(59,36,22,.15);
+  }
+
+  .rasgos {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;
+    padding-bottom: 64px;
+  }
+  .rasgo { background: var(--suave); border-radius: 18px; padding: 22px; }
+  .rasgo h3 { margin: 0 0 6px; font-size: 18px; }
+  .rasgo p { margin: 0; color: var(--texto2); }
+  .rasgo .emoji { font-size: 28px; }
+
+  footer { border-top: 1px solid var(--suave); padding: 26px 0 40px; font-size: 15px; color: var(--texto2); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
+  footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+
+  @media (max-width: 600px) {
+    .capturas { justify-content: flex-start; }
+    .capturas img { width: 190px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="./">J.A.U.M Games</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <img class="icono" src="icono.png" alt="Ícono de Café Sort">
+    <h1>Café Sort: Ordena y Decora</h1>
+    <p>Ordena ingredientes adorables, supera niveles y decora cada rincón de tu cafetería.</p>
+    <a class="boton" href="https://play.google.com/store/apps/details?id=com.joseurdaneta.cafesort" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1L13.5 12.5v-.2L3.7 1.7l-.1.1zm13.2 14l-3.3-3.3v-.2l3.3-3.3.1.1 3.9 2.2c1.1.6 1.1 1.7 0 2.3l-3.9 2.2-.1 0zm-.1.1L13.4 12.6 3.6 22.4c.4.4 1 .4 1.7.1l11.4-6.6M16.7 7.9L5.3 1.4c-.7-.4-1.3-.3-1.7.1l9.8 9.8 3.3-3.4z"/></svg>
+      Disponible en Google Play
+    </a>
+  </section>
+
+  <section class="capturas" aria-label="Capturas del juego">
+    <img src="captura_1.jpg" alt="Captura de Café Sort: nivel de ordenar ingredientes" loading="lazy">
+    <img src="captura_2.jpg" alt="Captura de Café Sort: decorar la cafetería" loading="lazy">
+    <img src="captura_4.jpg" alt="Captura de Café Sort" loading="lazy">
+  </section>
+
+  <section class="rasgos wrap">
+    <div class="rasgo">
+      <div class="emoji">🧩</div>
+      <h3>250 niveles</h3>
+      <p>Puzles de ordenar que van subiendo de dificultad poco a poco.</p>
+    </div>
+    <div class="rasgo">
+      <div class="emoji">☕</div>
+      <h3>Decora tu cafetería</h3>
+      <p>Gana monedas en cada nivel y úsalas para decorar cada rincón.</p>
+    </div>
+    <div class="rasgo">
+      <div class="emoji">🌿</div>
+      <h3>A tu ritmo</h3>
+      <p>Sin prisas ni tiempo límite. Juega cuando quieras.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 J.A.U.M Games</span>
+    <nav>
+      <a href="https://play.google.com/store/apps/details?id=com.joseurdaneta.cafesort" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://sites.google.com/view/cafesort-privacidad/inicio" target="_blank" rel="noopener">Política de privacidad</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
